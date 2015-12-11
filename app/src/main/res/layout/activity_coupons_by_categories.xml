@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.offers.couponempire.ui.Offer_By_CategoriesActivity">
+
+    <include
+        android:id="@+id/toolbar_action"
+        layout="@layout/app_bar_categories" />
+
+    <fragment
+        android:name="com.offers.couponempire.fragment.Coupons_By_CategoriesFragment"
+        tools:layout="@layout/fragment_coupons_by_brands" android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar_action"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>

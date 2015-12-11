@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <it.gmariotti.cardslib.library.view.CardViewNative
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list_cardId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/native_recyclerview_card.base"
+        card:card_layout_resourceID="@layout/native_card_layout"/>
+
+<!--
+    <include layout="@layout/demo_barheader_full_include_one"></include>
+-->
+
+</FrameLayout>

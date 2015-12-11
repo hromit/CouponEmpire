@@ -1,0 +1,268 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.offers.couponempire.ui.RegisterUserActivity">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:background="#0071b5"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:id="@+id/toplayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_register"
+            android:id="@+id/textnameee"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:layout_below="@+id/toplayout"
+        android:background="@android:color/white"
+        android:baselineAligned="false"
+        android:gravity="center_horizontal"
+        android:id="@+id/toplayout1">
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textdummy"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center"
+            android:text="Upgrade Your Experience"
+            android:textSize="14sp"
+            android:typeface="sans"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fb"
+            android:background="@drawable/rsz_report_fb"
+            android:layout_marginTop="5dp"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/google"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:background="@drawable/rsz_report_gplus"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            />
+
+        <!--<TextView
+            android:id="@+id/address_label"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/button_material_dark"
+            android:text="Or Use Your EMAIL ADDRESS"/>-->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/address_label"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textColor="@color/button_material_dark"
+            android:text="Or Use Your EMAIL ADDRESS"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".RegisterUserActivity"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:id="@+id/toplayout12">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customborder1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:id="@+id/fbv"
+                android:text="SIGN UP"
+                android:textSize="24sp"
+                android:textColor="@color/button_material_dark"
+                android:layout_gravity="left"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customborder1"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:id="@+id/googlev"
+                android:textSize="24sp"
+                android:text="SIGN IN"
+                android:textColor="@color/button_material_dark"
+                android:layout_gravity="right"
+                />
+
+
+
+         </LinearLayout>
+
+
+
+
+
+<!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/skip"
+            android:textColor="@color/button_material_dark"
+            android:layout_gravity="right"
+            android:text="Skip"
+            android:textStyle="bold"
+            android:typeface="sans"
+            />-->
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/toplayout1"
+            android:layout_alignParentBottom="true"
+
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/button_material_dark"
+                android:textSize="14sp"
+                android:id="@+id/view_again"
+                android:text="View Again"
+
+
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/button_material_dark"
+                android:id="@+id/skip"
+                android:textSize="14sp"
+                android:text="Skip"
+
+
+                />
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+</ScrollView>
+
+
+
+

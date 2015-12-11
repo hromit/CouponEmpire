@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.offers.couponempire.ui.NavigationItemActivity">
+
+    <include
+        android:id="@+id/app_bar_nav_items"
+        layout="@layout/app_bar_navigation_items" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar_nav_items"
+       android:id="@+id/nav_frag"/>.
+
+</RelativeLayout>

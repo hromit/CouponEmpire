@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_marginTop="2dp"
+        android:id="@+id/colorBorder"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_done_green_a700_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Use same ID to use built-in features -->
+    <TextView
+        android:layout_toRightOf="@id/colorBorder"
+        android:id="@+id/card_main_inner_simple_title"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:textColor="@color/primary"
+        android:text="87 users today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

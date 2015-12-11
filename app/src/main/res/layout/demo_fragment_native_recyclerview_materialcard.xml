@@ -1,0 +1,128 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/yoyu"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_material_light"
+    tools:context="materialtest.vivz.slidenerd.fragments.FragmentSearch">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/carddemo_progressContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:paddingTop="4dip"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/carddemo_listContainer"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--
+                &lt;!&ndash;android:paddingLeft="@dimen/carddemo_list_padding"
+                android:paddingRight="@dimen/carddemo_list_padding"&ndash;&gt;-->
+
+       <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/primary"
+            android:id="@+id/labeltext"
+            android:text="yyyyy"
+            android:textSize="18sp"
+            />-->
+
+
+
+
+        <it.gmariotti.cardslib.library.recyclerview.view.CardRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/carddemo_list_padding"
+            android:paddingRight="@dimen/carddemo_list_padding"
+            card:list_card_layout_resourceID="@layout/native_recyclerview_material_card_layout"
+            android:id="@+id/carddemo_recyclerview2"/>
+
+
+        <!--<TextView
+            android:visibility="gone"
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="No data..."/>-->
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/menu2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                app:menu_labels_style="@style/MenuLabelsStyle"
+                app:menu_icon="@drawable/ic_dashboard"
+                app:menu_labels_showAnimation="@anim/jump_from_down"
+                app:menu_labels_hideAnimation="@anim/jump_to_down"
+                app:menu_animationDelayPerItem="0"
+                app:menu_buttonSpacing="10dp"
+                app:menu_labels_margin="20dp"
+                app:menu_shadowColor="#444"
+                android:src="@drawable/ic_dashboard"
+                app:menu_backgroundColor="#99000000"
+                app:menu_colorNormal="#FFB805"
+                app:menu_colorPressed="#F2AB00"
+                app:menu_colorRipple="#D99200">
+
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit"
+                    app:fab_label="Top Brands"
+                    style="@style/MenuButtonsStyle" />
+
+
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit"
+                    app:fab_label="Categories"
+                    style="@style/MenuButtonsStyle" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,142 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.offers.couponempire.fragment.FeedbackFragment"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorHighlight"
+        android:id="@+id/gggggg">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:id="@+id/tabss"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorHighlight">
+
+
+
+            <CheckedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Idea"
+                android:background="@android:color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:drawablePadding="5dp"
+                android:checked="true"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:id="@+id/rr"
+                android:textColor="@color/button_material_dark"
+
+                />
+
+
+
+
+            <CheckedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Report"
+                android:background="@color/colorHighlight"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:drawablePadding="5dp"
+                android:checked="true"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:id="@+id/rrrr"
+                android:textColor="@color/button_material_dark"
+
+                />
+
+
+            <CheckedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Praise"
+                android:background="@color/colorHighlight"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:layout_marginRight="25dp"
+                android:drawablePadding="5dp"
+                android:checked="true"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:id="@+id/rrr"
+                android:textColor="@color/button_material_dark"
+
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <EditText
+            android:layout_below="@+id/tabss"
+            android:id="@+id/message"
+            android:background="@android:color/white"
+            android:gravity="top|left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="150dp"
+            android:padding="10dp"
+            android:hint="Type your feedback"
+            android:textColorHint="@color/button_material_dark"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"></EditText>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lab"
+            android:text="Tell us how you feel and we will get back to you"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/button_material_dark"
+            android:gravity="center"
+            android:layout_below="@+id/message"
+            android:textSize="16sp"/>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SUBMIT"
+            android:textColor="@color/button_material_dark"
+            android:textSize="18dp"
+            android:padding="3dp"
+            android:background="@android:color/white"
+            android:layout_below="@+id/lab"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:id="@+id/rrrrrrr" />
+
+
+
+
+
+
+
+    </RelativeLayout>
+</FrameLayout>

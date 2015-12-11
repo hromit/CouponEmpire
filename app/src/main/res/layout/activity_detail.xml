@@ -1,0 +1,438 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".DemoActivity" >
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="match_parent"
+        tools:context=".DemoActivity" >
+
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout
+            xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            sothree:umanoPanelHeight="60dp"
+            sothree:umanoShadowHeight="4dp"
+            sothree:umanoParalaxOffset="100dp"
+            sothree:umanoDragView="@+id/dragView"
+            sothree:umanoOverlay="true"
+            sothree:umanoScrollableView="@+id/list">
+
+
+            <!-- MAIN CONTENT -->
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+                    android:id="@+id/scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white">
+                        <android.support.v7.widget.Toolbar
+                            xmlns:sothree="http://schemas.android.com/apk/res-auto"
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/main_toolbar"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/colorPrimary"
+                            android:layout_width="match_parent"/>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/parallax_image_height"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/example" />
+                            <include layout="@layout/demo_barheader_full_include"></include>
+                        </FrameLayout>
+
+                        <View
+                            android:id="@+id/anchor"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/parallax_image_height"
+                            android:minHeight="@dimen/parallax_image_height" />
+
+                        <TextView
+                            android:id="@+id/body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/anchor"
+                            android:background="@android:color/white"
+                            android:textColor="@color/button_material_dark"
+                            android:maxLines="5"
+                            android:paddingBottom="@dimen/activity_vertical_margin"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin"
+                            android:paddingTop="@dimen/activity_vertical_margin"
+                            android:text="@string/lipsum" />
+
+
+                        <TextView
+                            android:id="@+id/main2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/body"
+                            android:drawableLeft="@drawable/ic_done_green_a700_24dp"
+                            android:text="Verified Today"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/primary"
+                            android:padding="10dp"
+                            android:background="@color/colorHighlight"
+                            android:clickable="false"
+
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:id="@+id/main3"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@id/main2"
+                            android:drawableLeft="@drawable/ic_report_problem_black_24dp"
+                            android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                            android:text="View All Paytm Offers"
+                            android:textColor="@color/primary"
+                            android:padding="20dp"
+                            android:background="@color/white"
+                            android:clickable="true"
+
+                            android:textSize="16sp" />
+
+
+                        <!--   <TextView
+                               android:id="@+id/main"
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:layout_marginTop="?attr/actionBarSize"
+                               android:gravity="center"
+                               android:text="Main Content"
+                               android:clickable="true"
+                               android:focusable="false"
+                               android:focusableInTouchMode="true"
+                               android:textSize="16sp" />-->
+
+                    </RelativeLayout>
+                </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+                <include layout="@layout/gradient_header" />
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+                    app:theme="@style/Toolbar" />
+
+
+            </FrameLayout>
+
+            <!-- SLIDING LAYOUT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:id="@+id/dragView">
+
+                android:focusable="false"
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/button_material_dark"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"/>
+
+                    <Button
+                        android:id="@+id/follow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+                <!--
+                            <ListView
+                                android:id="@+id/list"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+                            </ListView>-->
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:divider="?android:dividerHorizontal"
+                    android:clickable="true"
+                    android:showDividers="middle"
+                    >
+
+
+
+
+
+                    <CheckedTextView
+                        android:id="@+id/my_checkedtextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checkMark="@android:drawable/checkbox_on_background"
+                        android:clickable="true"
+                        android:text="Offer did not work"
+                        android:textColor="@color/button_material_dark"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+
+                        />
+
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <CheckedTextView
+                        android:id="@+id/my_checkedtextview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checkMark="@android:drawable/checkbox_on_background"
+                        android:clickable="true"
+                        android:text="Incorrect Offer/restaurants details"
+                        android:textColor="@color/button_material_dark"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <CheckedTextView
+                        android:id="@+id/my_checkedtextview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checkMark="@android:drawable/checkbox_on_background"
+                        android:clickable="true"
+                        android:text="No relevant offer in searched area"
+                        android:textColor="@color/button_material_dark"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"                    />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <CheckedTextView
+                        android:id="@+id/my_checkedtextview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checkMark="@android:drawable/checkbox_on_background"
+                        android:clickable="true"
+                        android:text="Other"
+                        android:textColor="@color/button_material_dark"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"                    />
+
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/darker_gray"/>
+                    <!--  <View
+                          android:layout_width="fill_parent"
+                          android:layout_height="1dp"
+                          android:layout_margin="10dp"
+                          android:background="@android:color/darker_gray"/>
+
+
+      -->
+
+                   <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/email_label"
+                        android:text="Enter Email"
+                        android:textSize="14sp"
+                        android:textColor="@color/button_material_dark"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="5dp"/>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="Email address"
+                        android:background="@drawable/customborder1"
+                        android:textColor="@color/button_material_dark"
+                        android:textSize="24sp"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true">
+                    </EditText>
+-->
+                   <!-- <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/login_label"
+                        android:text="OR LOGIN WITH"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/button_material_dark"
+                        android:layout_margin="20dp"/>
+-->
+
+
+                   <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/fb"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rsz_report_fb"
+                            />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/gplus"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rsz_report_gplus"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/info"
+                        android:text="Tell us how you feel and we will get back to you"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/button_material_dark"
+                        android:layout_margin="20dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:id="@+id/cancel"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/customborder1"
+                            android:textColor="@color/button_material_dark"
+                            android:text="CANCEL"
+                            />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:id="@+id/submit"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:background="@color/primary_dark"
+                            android:textColor="@android:color/white"
+                            android:text="SUBMIT"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                </ScrollView>
+
+
+
+            </LinearLayout>
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/app_bar_bottom_extended" />
+
+</LinearLayout>
